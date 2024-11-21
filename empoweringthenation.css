@@ -49,7 +49,7 @@ body {
 
 .button-link {
   padding: 10px 20px;
-  background-color: #5c3312;
+  background-color: #8f3e36;
   color: white;
   text-decoration: none;
   border-radius: 30px;
@@ -83,7 +83,7 @@ body {
 }
 
 .herosection .button-link {
-  background-color: #5c3312;
+  background-color: #8f3e36;
   color: white;
   text-decoration: none;
   border-radius: 30px;
@@ -98,7 +98,7 @@ body {
 
 /* About Us Section */
 .aboutuscontainer {
-  background-color: #5c3312;
+  background-color: #8f3e36;
   width: 90%;
   max-width: 900px;
   margin: 50px auto;
@@ -146,7 +146,7 @@ body {
 
 /* Courses Section */
 .coursesContainer {
-  background-color: #2e8331;
+  background-color: #8dc63e;
   width: 90%;
   max-width: 900px;
   margin: 50px auto;
@@ -236,7 +236,7 @@ justify-self: center;
 }
 
 .testimonialsbutton {
-  background-color: #2e8331;
+  background-color: #8dc63e;
   color: white;
   text-decoration: none;
   border-radius: 30px;
@@ -270,12 +270,12 @@ justify-self: center;
 
 .hrfooter{
   border: none;
-border-top: 3px dashed #5c3312;
+border-top: 3px dashed #8f3e36;
 
 }
 
 .footerbutton {
-  background-color: #5c3312;
+  background-color: #8f3e36;
   color: white;
   text-decoration: none;
   height: 40px;
@@ -311,7 +311,7 @@ border-top: 3px dashed #5c3312;
 /*Six months courses page*/
 
 .sixmonthscoursescontainer {
-  background-color: #2e8331;
+  background-color: #8dc63e;
   width: 41%;
   max-width: 900px;
   margin-top: 50px;
@@ -401,7 +401,7 @@ border-top: 3px dashed #5c3312;
 }
 
 .course-info {
-  background-color: #2e8331;
+  background-color: #8dc63e;
   width: 63%;
   max-width: 900px;
   margin: 50px auto;
@@ -433,7 +433,7 @@ border-top: 3px dashed #5c3312;
 
 .book-now {
   padding: 10px 20px;
-  background-color: #5c3312;
+  background-color: #8f3e36;
   color: white;
   text-decoration: none;
   border-radius: 30px;
