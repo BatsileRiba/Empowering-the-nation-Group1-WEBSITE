@@ -1,0 +1,211 @@
+
+
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Total Fees</title>
+    <link rel="stylesheet" href="empoweringthenation.css">
+    <style>
+        /* CSS styling for the form page */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            color: #333;
+            background-color: white;
+        }
+
+        .form-section {
+            width: 95%;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 40px auto;
+            text-align: center;
+            border: #40e145 2px dashed;
+        }
+
+        .form-section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            margin-bottom: 15px ;
+        }
+
+        .form-section h1 {
+            margin-bottom: 25px;
+            margin-top:25px ;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .checkbox-group label {
+            margin-bottom: 10px;
+        }
+
+        .calculate-button, .book-button {
+            background-color: #bd6c29;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .calculate-button:hover, .book-button:hover {
+            background-color: #555;
+        }
+
+        .output-field {
+            width: 100%;
+            max-width: 300px;
+            padding: 10px;
+            border: 2px solid #40e145;;
+            border-radius: 5px;
+            margin: 10px auto;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .booking-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .booking-form input[type="text"],
+        .booking-form input[type="email"],
+        .booking-form input[type="number"] {
+            padding: 10px;
+            width: 100%;
+            max-width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navigation">
+        <img src="Images/XHAW GROUP 1 LOGO.png" alt="Empowering the nation logo" width="150" height="150">
+        <ul>
+            <li><a href="empoweringthenation.html#courses">Courses</a></li>
+            <li><a href="empoweringthenation.html#testimonials">Testimonials</a></li>
+            <li><a href="contactus.html" >Contact Us</a></li>
+        </ul>
+        <a href="bookings.html" class="button-link" >Book Now</a>
+       </nav> 
+
+    <section class="form-section">
+        <h1>Calculate Total Fees</h1>
+        <div class="checkbox-group">
+            <h2>Pick your 6 months Course/s:</h2>
+            <label><input type="checkbox" class="course-checkbox" data-fee="1500"> First Aid (R1500)</label>
+            <label><input type="checkbox" class="course-checkbox" data-fee="1500"> Sewing (R1500)</label>
+            <label><input type="checkbox" class="course-checkbox" data-fee="1500"> Landscaping (R1500)</label>
+            <label><input type="checkbox" class="course-checkbox" data-fee="1500"> Life Skills (R1500)</label>
+            <h2>Pick your 6 weeks course/s:</h2>
+            <label><input type="checkbox" class="course-checkbox" data-fee="750"> Child minding (R750)</label>
+            <label><input type="checkbox" class="course-checkbox" data-fee="750"> Cooking (R750)</label>
+            <label><input type="checkbox" class="course-checkbox" data-fee="750"> Garden Maintenance (R750)</label>
+        </div>
+        <button class="calculate-button" onclick="calculateTotal()">Calculate</button>
+        <div class="output-field" id="output">Your total course fee is here.</div>
+
+        <div class="booking-form">
+            <h3>Make a Booking</h3>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email">
+            <label for="contacts">Contacts</label>
+            <input type="number" id="contacts" placeholder="Enter your contact number">
+            <button class="book-button" onclick="submitForm()">Book Now</button>
+        </div>
+    </section>
+
+    <script>
+        function calculateTotal() {
+            const checkboxes = document.querySelectorAll('.course-checkbox');
+            let total = 0;
+            checkboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    total += parseInt(checkbox.getAttribute('data-fee'));
+                }
+            });
+            document.getElementById('output').textContent = "Your total course fee is R" + total;
+        }
+
+        function submitForm() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const contacts = document.getElementById('contacts').value.trim();
+
+            
+            if (!name || !email || !contacts) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+           
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            
+            if (contacts.length < 10) {
+                alert("Please enter a valid contact number.");
+                return;
+            }
+
+            
+            alert("Form successfully submitted!");
+        }
+    </script>
+
+<hr class="hrfooter">
+
+<div class="Footer">
+        
+    <img class="logofooter" src="Images/XHAW GROUP 1 LOGO.png" alt="" width="120" height="120">
+    <div class="sitemap">
+    <div class="footersecond">
+        <h3>Sitemap</h3> 
+        <a href="empoweringthenation.html"> <h5>Home</h5> </a>
+        <a href="empoweringthenation.html#courses"> <h5>Courses</h5> </a>
+        <a href="sixmonthscourses.html"> <h5>Six Month Courses</h5> </a>
+    </div>
+
+    <div class="footerthird">
+       <a href="sixweekscourses.html" > <h5>Six Week Courses</h5> </a>
+       <a href="bookings.html" > <h5>Book Now</h5> </a>
+       <a href="contactus.html"> <h5>Contact Us</h5> </a>
+    </div>
+    </div>
+
+    <a href="bookings.html" class="footerbutton">Book Now</a>
+
+</div>
+</body>
+</html>
+
+
