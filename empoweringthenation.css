@@ -49,7 +49,7 @@ body {
 
 .button-link {
   padding: 10px 20px;
-  background-color: #8f3e36;
+  background-color: #8f5e36;
   color: white;
   text-decoration: none;
   border-radius: 30px;
@@ -83,7 +83,7 @@ body {
 }
 
 .herosection .button-link {
-  background-color: #8f3e36;
+  background-color: #8f5e36;
   color: white;
   text-decoration: none;
   border-radius: 30px;
@@ -98,7 +98,7 @@ body {
 
 /* About Us Section */
 .aboutuscontainer {
-  background-color: #8f3e36;
+  background-color: #8f5e36;
   width: 90%;
   max-width: 900px;
   margin: 50px auto;
@@ -270,12 +270,12 @@ justify-self: center;
 
 .hrfooter{
   border: none;
-border-top: 3px dashed #8f3e36;
+border-top: 3px dashed #8f5e36;
 
 }
 
 .footerbutton {
-  background-color: #8f3e36;
+  background-color: #8f5e36;
   color: white;
   text-decoration: none;
   height: 40px;
@@ -433,7 +433,7 @@ border-top: 3px dashed #8f3e36;
 
 .book-now {
   padding: 10px 20px;
-  background-color: #8f3e36;
+  background-color: #8f5e36;
   color: white;
   text-decoration: none;
   border-radius: 30px;
